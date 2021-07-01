@@ -56,12 +56,13 @@ def twitter():
 
 @app.route("/facebook")
 def facebook():
-    token='EAACiFj0RLisBAG8yZCQHaXvoz1qZBJB8DU5dqvW8Q5SPuIjYxO0dthRlTu2dOjD0Oy2d2ppz53GtZCCJdq2dhZCWY7ms82qZABIgy9mEGgbRQl7uD6BVu8OayzPoqAAkZCnZCQ2xkkmcSbZC34YkqqkkgXncqxfNNaRBTqympDXfKgZDZD'
+    token='EAACiFj0RLisBAL8eL9CKT7hyUqCdbEl0HA2oxpFLs2vkhp9Fm7vHC4ZCx0XWkoDDl1g1rfjtImMnbOZAJFXbH8iYAD5IvD6aeiTnwFtZBScCuZCXM2IKtze2J2ZCCJCP2ZBrK6XFiWeVKJUf8t8PgYPCFMTFYwJpjXur7RBN0QJx9qoFwLNX2C540epi64laZAlceczuVy0JwZDZD'
     res = requests.get("https://graph.facebook.com/v10.0/495152637273035/photos?access_token="+token+"&fields=images%2Cid&limit=25&after=MzEwODYxMDk3MjU5Mzg0MgZDZD")
     res1 = requests.get("https://graph.facebook.com/v10.0/234723296649305/posts?access_token="+token+"&pretty=0&limit=25&after=QVFIUjFFVVR3Vl9JNDRZAUjRBOTNkMU45VnlUQ1VZAVGp2VWRocjNSWWIwN1NuN3VPMDBFdExCSkdEek0wQk5xVFg2X3dYNElFN3ZAHMUZA3YThnQUduQU11U0p1S014dGhQNjlLQ0ZAyNlJQZAlg2U0w2aVlFejZA2OVJlZATFoRndvMlRSSkNv")
     images_data = []
     posts_data = []
     n=1
+    #print(res.json())
     while(n<5):
         after_dat = res.json()['paging']['cursors']['after']
         after_dat_posts = res1.json()['paging']['cursors']['after']
@@ -79,7 +80,7 @@ def facebook():
         res = requests.get("https://graph.facebook.com/v10.0/495152637273035/photos?access_token="+token+"&fields=images%2Cid&limit=25&after="+after_dat)
         res1 = requests.get("https://graph.facebook.com/v10.0/234723296649305/posts?access_token="+token+"&pretty=0&limit=25&after="+after_dat_posts)
         n += 1
-        
+
     final_posts_data = []
     for i in images_data:
         for j in posts_data:
