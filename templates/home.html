@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title><link rel="stylesheet" href="{{ url_for('static', filename='css/Home.css') }}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="title">
+            <p>Social Media Tweets</p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="card1" style="height: 300px;">
+            <div class="img">
+                <img src="static/images/facebook.png" alt="facebook" />
+            </div>
+            <div class="company">
+                <p>Facebook</p>
+            </div>
+            <div class="desc">
+                <p>You can find all posts related information of the "Angaros_Group"</p>
+            </div>
+            <div class="button">
+                <a href="{{url_for('facebook') }} " style="text-decoration: none; color: black; font-size: 20px;">Open</a>
+            </div>
+        </div>
+        <div class="card1" style="height: 300px;">
+            <div class="img">
+                <img src="static/images/twittter.png" alt="twitter" />
+            </div>
+            <div class="company">
+                <p>Twitter</p>
+            </div>
+            <div class="desc">
+                <p>You can find all posts related information of the "Angaros_Group"</p>
+            </div>
+            <div class="button">
+                <a href="{{url_for('twitter') }} " style="text-decoration: none; color: black; font-size: 20px;">Open</a>
+            </div>
+        </div>
+        <div class="card1" style="height: 300px;">
+            <div class="img">
+                <img src="static/images/linkedin.png" alt="linkedin" />
+            </div>
+            <div class="company">
+                <p>LinkedIn</p>
+            </div>
+            <div class="desc">
+                <p>You can find all posts related information of the "Angaros_Group"</p>
+            </div>
+            <div class="button">
+                <a href="{{url_for('twitter') }} " style="text-decoration: none; color: black; font-size: 20px;">Open</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>@Angaros_Group</p>
+    </div>
+</body>
+
+</html>

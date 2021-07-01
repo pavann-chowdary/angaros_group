@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceBook Posts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Twitter.css') }}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="title">
+            <p>Facebook Posts</p>
+        </div>
+    </div>
+    <div class="tweet">
+        {% for i in data %}
+        <div class="cards">
+            <div class="img">
+                <img src="{{i[0][0]['source']}}" alt="{{i[0][0]['source']}}">
+            </div>
+            <div class="info">
+                <p>{{i[1][0]['message']}}</p>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+</body>
+
+</html>
