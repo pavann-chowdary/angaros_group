@@ -56,7 +56,7 @@ def twitter():
 
 @app.route("/facebook")
 def facebook():
-    token='EAACiFj0RLisBAFv66YnoXstyymoBfMOadlOQwn9dIWNZCvtvo2ZAISe8PRGjynHouCoVpNO0MagEVZBcNzxCfJtQ9KLn258Jrx2wz97tMlsX1fpxr3Lzt7wje8PvZBoiRESuOu5yRcBCe1n2BnKuUoeZAoCzLJntqQtyspME0Rld2BKb7In2Xx5kTNAs8xGkbNeHwbfwU6QZDZD'
+    token='EAACiFj0RLisBAK4CEblfZCZA8cSSO1gtk4xJf02AIDfFZANRcdEcpwTFHZCEOGoWswJOpMjnngKPC0iJnLYuk2S89c7DNLkGqKnq7ypyBDEOmYlbyswMkjBHicxjZAuHkBgupwtI2xFZC8BmJJs5DiUlHdo3sC9xwZCm4alGmLRBy2ZA5NXzIZBFR'
     res = requests.get("https://graph.facebook.com/v10.0/495152637273035/photos?access_token="+token+"&fields=images%2Cid&limit=25&after=MzEwODYxMDk3MjU5Mzg0MgZDZD")
     res1 = requests.get("https://graph.facebook.com/v10.0/234723296649305/posts?access_token="+token+"&pretty=0&limit=25&after=QVFIUjFFVVR3Vl9JNDRZAUjRBOTNkMU45VnlUQ1VZAVGp2VWRocjNSWWIwN1NuN3VPMDBFdExCSkdEek0wQk5xVFg2X3dYNElFN3ZAHMUZA3YThnQUduQU11U0p1S014dGhQNjlLQ0ZAyNlJQZAlg2U0w2aVlFejZA2OVJlZATFoRndvMlRSSkNv")
     images_data = []
